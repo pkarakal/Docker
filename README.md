@@ -46,3 +46,19 @@ Then you can `cd` into the new folder by `cd pds-codebase` and do a `make all` a
 ![2020-10-13_11h12_08](https://user-images.githubusercontent.com/16119641/95840842-f5efc200-0d44-11eb-89a6-63929eb11d1d.png)
 
 
+
+## Use Vagrant VM
+Vagrant enables users to create and configure lightweight, reproducible, and portable development environments. This is 
+a bit more heavy than a docker container but can be quite useful for users that either can't run docker or that really 
+have encountered serious problems with the docker setup. Vagrant creates a VM with the configuration on the Vagrantfile
+
+### To be up and running
+This Vagrant Box can either run with the VirtualBox hypervisor or the Hyper-V hypervisor. On Windows you can just enable Hyper-V.
+*  Install [Vagrant](https://www.vagrantup.com/downloads) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads) on your system. 
+    ```console
+    sudo apt-get install vagrant virtualbox // Debian/Ubuntu based
+    sudo dnf install vagrant VirtualBox // Fedora/CentOS/RHEL and derivatives
+    ```
+*  Run `vagrant up` from the directory of this repository
+*  SSH to the vagrant box by running `vagrant ssh`
+*  To shutdown the VM just run `vagran hault`
